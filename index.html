@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Lato|Raleway" rel="stylesheet">
+	<!-- ### End of Google Fonts -->
+	<title>NudBank</title>
+	<meta charset="utf-8">
+	<style>
+			/*Vars*/
+:root{
+	--nav-color: rgb(250,250,250);
+	--nav-border-color: rgb(250, 250, 250);
+	--border-active: rgb(19,19,19);
+	--title-color: white;
+	--button-color: rgb(18,18,18);
+	--title-button-color: white;
+}
+
+/* Background Color */
+body{
+	background-color: rgb(250, 250, 250);
+	background: url("./images/bg1.png");
+	margin: 0px;
+	position: relative;
+}
+header{
+	background-color: rgb(250, 250, 250);
+	padding-bottom: 50px;
+	padding-top: 1px;
+}
+nav#nav-container{
+	position: sticky;
+	z-index: 1000;
+}
+main{
+	z-index: 1;
+}
+.tfont{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+.cfont{
+	font-family: 'Roboto', sans-serif;
+}
+/* Initial Letter */
+._il{
+	color: rgb(37, 156, 96);
+	border-bottom: 5px solid rgb(230,230,230);
+}
+.emfase{
+	color: rgb(37, 156, 96);
+	border-bottom: 2px solid rgb(230,230,230);
+	font-weight: bold;
+}
+.info-content{
+	font-size: 1.3em;
+}
+.info-block{
+	position: relative;
+	width: 400px;
+	height: 380px;
+	top: 15%;
+	margin: auto;
+}
+.info-title{
+	color: var(--title-color);
+	
+	position: relative;
+	text-align: center;
+	font-size: 5em;
+}
+
+/* Nav Bar */
+.nav-bar{
+	margin:auto;
+}
+.button-type{
+	display: block;
+	color: var(--button-color);
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	border: 3px solid var(--button-color);
+	width: 160px;
+	padding: 10px;
+	text-decoration: none;
+	position: relative;
+	margin: auto;
+	top: 100px;
+}
+a.button-type:hover{
+	animation-name: hovering;
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;
+}
+@keyframes hovering{
+	100%{
+		background-color: var(--button-color);
+		color: var(--title-button-color);
+		transform: scale(1.04);
+	}
+}
+li a:hover{
+	color: rgb(37, 156, 96);
+	animation-name: colorize;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+
+}
+@keyframes colorize{
+	0%{
+		border-bottom: 3px solid rgba(37, 156, 96, 0.2);
+	}
+	100%{
+		border-bottom: 3px solid rgb(37, 156, 96);
+	}
+}
+li a{
+	user-select: none;
+	display: block;
+	color: rgb(19,19,19);
+	border-bottom: 3px solid var(--nav-border-color);
+	text-decoration: none;
+	text-align: center;
+	padding: 13.5px 10px;
+}
+.active{
+	border-bottom: 3px solid var(--border-active);
+}
+ul{
+	width: 600px;
+	list-style-type: none;
+}
+li{
+	width: 120px;
+	float: left;
+}
+.strikethrough{
+	color: #DDD;
+	text-decoration: line-through;
+}
+#nav-container{
+	position: sticky;
+	overflow: auto;
+	top: 0px;
+	background-color: var(--nav-color);
+	box-shadow: 3px 3px 3px rgb(220,220,220), 1px 1px 1px rgb(19,19,19);
+}
+#bank_name{
+	user-select: none;
+	color: rgb(48,48,48);
+	font-size: 2.5em;
+	margin-top: 50px;
+	z-index: 100;
+}
+#info1{
+	--title-color: rgb(19,19,19);
+
+	display: block;
+	background: url("https://i.imgur.com/0pgEPcy.png");
+	position: relative;
+	width: 100%;
+	height: 680px;
+	top: 180px;
+	box-shadow: 3px 3px 3px #ddd;
+	z-index: 10;
+}
+#info2{
+	--title-color: #FCFCFC;
+	--button-color: #FCFCFC;
+	--title-button-color: #464646;
+
+	display: block;
+	color: #FCFCFC;
+	background: url("https://i.imgur.com/hlYRQSa.png");
+	position: relative;
+	top: 120px;
+	width: 100%;
+	height: 780px;
+	z-index: 9;
+}
+#info3{
+	--title-color: #FCFCFC;
+	--button-color: #FCFCFC;
+	--title-button-color: #464646;
+
+	text-justify: ;
+	display: block;
+	color: #FCFCFC;
+	background: url("https://i.imgur.com/zK7xQm6.png");
+	position: relative;
+	top: 50px;
+	width: 100%;
+	height: 780px;
+	z-index: 8;
+}
+footer{
+	width: 100%;
+	height: 50px;
+	background-color: rgb(230,230,230);
+	position: relative;
+	top: 50px;
+	border-top: 5px solid rgb(80,80,80);
+}
+#footer-content{
+	z-index: 100;
+	width: 400px;
+	position: relative;
+	margin: auto;
+	bottom: -15px;
+	text-align: center;
+}
+	</style>
+</head>
+<body>
+	<header>
+		<h1 id="bank_name" class="tfont"><span class="_il">N</span>UDBANK</h1>
+	</header>
+	<nav id="nav-container">
+		<ul class="nav-bar cfont">
+			<li><a class="active" href="#Home">Home</a></li>
+			<li><a href="#Services">Serviços</a></li>
+			<li><a href="#Cards">Cartões</a></li>
+			<li><a href="#Contact">Contato</a></li>
+			<li><a href="#AboutUs">Sobre Nós</a></li>
+		</ul>
+	</nav>
+	<main>
+		<div id="info1">
+			<div class="info-block">
+				<h1 class="tfont info-title">Serviços</h1>
+				<hr>
+				<p class="cfont info-content">O <span class="emfase">Nosso</span> banco oferece os mais variados serviços disponíveis no mercado. Ta esperando o que pra cair no bait?</p>
+				<a class="button-type cfont" href="#CairNoBait">CAIR NO BAIT</a>
+			</div>
+		</div>
+		<hr>
+		<div id="info2" class="info-container">
+			<div class="info-block">
+				<h1 class="tfont info-title">Cartões</h1>
+				<hr>
+				<p class="cfont info-content">Temos parceria com diversas bandeiras de cartão, para que assim, termos a capacidade de te oferecer uma forma mais ampla de endividamento. E ai?</p>
+				<a class="button-type cfont" href="#SoVamo">SÓ VAMO</a>
+			</div>
+		</div>
+		<hr>
+		<div id="info3" class="info-container">
+			<div class="info-block">
+				<h1 class="tfont info-title">Sobre Nós</h1>
+				<hr>
+				<p class="cfont info-content">Como maioria dos bancos, <span class="emfase">somos</span> responsáveis pela proteção do <strong>seu</strong> dinheiro, mas não sem tirar uma boa porcentagem do mesmo. Mas tudo bem, mascaramos a <span class="strikethrough">cara</span> barata taxa de manutenção em troca de serviços que facilitaram sua vida. Facilite sua vida ainda hoje!</p>
+				<a class="button-type cfont" href="#Suicide">ASSOCIAR-SE</a>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<p id="footer-content">NudBank &copy; 2019 - Todos os direitos reservados</p>
+	</footer>
+</body>
+</html>
